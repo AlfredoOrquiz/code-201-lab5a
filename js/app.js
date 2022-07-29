@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b,) { //eslint-disable-line
   let sum = a + b;
-  let total = `The sum of ${a} and ${b} is 11.`;
+  let total = `The sum of ${a} and ${b} is ${sum}.`;
   let arr = [sum, total];
   return arr;
 }
@@ -31,7 +31,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b,) { //eslint-disable-line
   let multiply = a * b;
-  let message = `The product of ${a} and ${b} is 45.`;
+  let message = `The product of ${a} and ${b} is ${multiply}.`;
   let arr = [multiply, message];
   return arr;
 }
@@ -82,9 +82,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+function sumArray(Arr) { 
+  let total = sum(sum(Arr[0], Arr[1])[0], Arr[2])[0];
+  let message = `${Arr[0]},${Arr[1]},${Arr[2]} was passed in as an array of numbers, and ${total} is their sum.`;
+  return [total, message];
+  //eslint-disable-line
 
 }
+
+testSumArray(testArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
